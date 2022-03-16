@@ -1,0 +1,36 @@
+<html>
+<body>
+    <h2>Atribuições JavaScript</h2>
+        <p>Operadores</p>
+           
+        <p id="operadorasoma"></p>
+        <p id="operadorasubtracao"></p>
+        <p id="operadoramultiplicacao"></p>
+        <p id="operadoradivisao"></p>
+        
+        <script>
+        let a = 10;
+        a += 5;
+        document.getElementById("operadorasoma").innerHTML = "Resultado operadora soma => (a = 10) e " + "(a+= 5) => " + a;
+        </script>
+
+        <script>
+        let b = 10;
+        b -= 3;
+        document.getElementById("operadorasubtracao").innerHTML = "Resultado operadora subtração => (b = 10) e " + "(b -= 3) => " + b;
+        </script>
+
+        <script>
+        let c = 10;
+        c *= 8;
+        document.getElementById("operadoramultiplicacao").innerHTML = "Resultado operadora multiplicação => (c = 10) e " + "(c *= 8) => " + c;
+        </script>
+
+        <script>
+        let d = 10;
+        d /= 8;
+        document.getElementById("operadoradivisao").innerHTML = "Resultado operadora divisão => (d = 10) e " + "(d /= 8) => " + d;
+        </script>
+
+</body>
+</html>

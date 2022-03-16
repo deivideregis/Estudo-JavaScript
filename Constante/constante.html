@@ -1,0 +1,20 @@
+<html>
+<body>
+    <h2>JavaScript constante</h2>
+        <p id="constante"></p>
+            <script>
+                try {
+                    
+                        let T,B;
+                        const PI = 3.141592653589793;
+                        B = 5;
+                        T = B * PI;
+
+                        document.getElementById("constante").innerHTML = "Resultado: " + " ( B = " + B + ") * ( PI = " + PI + ") => Resultado: " + T;
+                    }
+                    catch (erro) {
+                        document.getElementById("constante").innerHTML = erro;
+                    }
+            </script>
+</body>
+</html>

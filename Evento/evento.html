@@ -1,0 +1,32 @@
+<html>
+<body>
+    <p>Qual dia e a horas é agora?</p>
+    
+    <p id="horario"></p>
+
+            <script>
+                function dataAtualFormatada(){
+                    
+                    let data = new Date(),
+                    dia = data.getDate().toString(),
+                    mes = data.getMonth() < 9 ? "0" + (data.getMonth()+1).toString() : (data.getMonth()+1).toString(),
+                    ano = data.getFullYear(),
+                    hora = data.getHours(),
+                    minutos = data.getMinutes()                    
+                    
+                    return `${dia}/${mes}/${ano} ${hora}:${minutos}`}
+            </script>
+                    
+            <script>
+                function SemanaFormatada(){
+                    let semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+                    let diadasemana = new Date();
+                    return semana[diadasemana.getDay()]
+                }
+            </script>
+
+    <button onclick="document.getElementById('horario').innerHTML='Data e hora: ' + dataAtualFormatada() + ' e dia da semana: ' + SemanaFormatada()">Data e hora?</button>
+
+
+</body>
+</html>  

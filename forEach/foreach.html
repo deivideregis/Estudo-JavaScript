@@ -1,0 +1,24 @@
+<html>
+<body>
+    <h2>JavaScript Array.forEach()</h2>
+        <p>Chama uma função uma vez para cada elemento de matriz</p>
+
+        <p id="foreach"></p>
+
+        <script>
+            const numbers = [45, 4, 9, 16, 25];
+            
+            let txt = "";
+            numbers.forEach(myFunction);
+            document.getElementById("foreach").innerHTML = txt;
+            
+            function myFunction(value, index, array) {
+                if(index < 4)
+                    txt += "Valor: " + value + ";<br>";
+                else
+                    txt += "Valor: " + value + ".";
+            }
+        </script>    
+
+</body>
+</html>
