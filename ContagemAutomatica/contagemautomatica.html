@@ -1,0 +1,38 @@
+<html>
+<body>
+    <h2>JavaScript Web contagem API</h2>
+        <p>Quantidade de número(s): <output id="resultado"></output></p>
+
+            <button onclick="IniciarContagem()">iniciar a contagem</button> 
+            <button onclick="PararContagem()">Parar a contagem</button>
+
+                <script>
+                    let w;                    
+
+                    const arquivo = "workers.js";
+                    
+                   /// var arquivoWorkersJS = new File(diretorio,arquivo);
+
+                  //  if(arquivoWorkersJS.exists()){
+                    
+                        function IniciarContagem() {
+                        if(typeof(w) == "undefined") {
+                                w = new Worker("workers.js");
+                            }
+                                w.onmessage = function(event) {
+                                    document.getElementById("result").innerHTML = event.data;
+                                };
+                            }
+
+                            function PararContagem() { 
+
+                            w.terminate();
+                            w = undefined;
+                        }
+                    //}else{
+                       // document.getElementById("result").innerHTML = 'O arquivo workers.js não existe';
+                       // }
+
+                </script>
+</body>
+</html>

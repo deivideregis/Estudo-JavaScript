@@ -1,0 +1,24 @@
+<html>
+<body>
+    <h2>JavaScript validação</h2>
+        <p>Digite um número e clique no botão 'OK'</p>
+
+        <input id="btnokId1" type="number" min="100" max="300" required>
+        <button onclick="myFunction()">OK</button>
+        
+            <p>Se o número for menor que 100 ou mais de 300, uma mensagem de erro será exibida.</p>
+            
+            <p id="validacao"></p>
+            
+            <script>
+                function myFunction() {
+                const inpObj = document.getElementById("btnokId1");
+                if (!inpObj.checkValidity()) {
+                    document.getElementById("validacao").innerHTML = inpObj.validationMessage;
+                } else {
+                    document.getElementById("validacao").innerHTML = "Validado com sucesso!";
+                } 
+                } 
+            </script>
+</body>
+</html>

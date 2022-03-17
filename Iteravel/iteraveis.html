@@ -1,0 +1,75 @@
+<html>
+<body>
+    <h2>JavaScript Iteráveis</h2>
+    
+    <p id="iteravelstring"></p>
+    <p id="iteravelarray"></p>
+    <p id="iteravelset"></p>
+    <p id="frutasmap"></p>
+
+        <p>Iterar sobre uma string:</p>
+    
+            <script>
+                // Create a String
+                const nome = "W3Schools";
+                
+                // List all Elements
+                let textstring = ""
+                for (const x of nome) {
+                    textstring += "string: " + x + "<br>";
+                }
+                
+                document.getElementById("iteravelstring").innerHTML = textstring;
+            </script>
+
+         <p>Iterar sobre uma Array:</p>
+
+            <script>
+                // Create aa Array
+                const letras = ["a","b","c"];
+
+                // List all Elements
+                let textarray = "";
+                for (const x of letras) {
+                    textarray += "Array: " + x + "<br>";
+                }
+
+                document.getElementById("iteravelarray").innerHTML = textarray;
+            </script>
+
+        <p>Iterar sobre um Set:</p>
+
+            <script>
+                // Create a Set
+                const letrasset = new Set(["a","b","c"]);
+
+                // List all Elements
+                let textset = "";
+                for (const x of letrasset) {
+                    textset += "Set: " + x + "<br>";
+                }
+
+                document.getElementById("iteravelset").innerHTML = textset;
+            </script>
+
+            <p>Iterar sobre um Map:</p>
+
+            <script>
+                // Create a Map
+                const frutas = new Map([
+                    ["macas", 500],
+                    ["bananas", 300],
+                    ["laranja", 200]
+                ]);
+                
+                // List all entries
+                let textmaps = "";
+                for (const x of frutas) {
+                    textmaps += "Map: " + x + "<br>";
+                }
+    
+                document.getElementById("frutasmap").innerHTML = textmaps;
+            </script>
+
+</body>
+</html>

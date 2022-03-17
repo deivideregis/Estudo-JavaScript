@@ -1,0 +1,35 @@
+<html>
+<body>
+    <h2>JavaScript Loops</h2>
+        
+        <p>Um loop com uma  declaração <b>break</b>.</p>
+           
+        <p id="break"></p>
+        <p id="continue"></p>
+
+        <script>
+        let textbreak = "";
+        for (let i = 0; i < 10; i++) 
+        {
+          if (i === 3) { break; 
+        }
+            textbreak += "1 a 9 e no numero 3: (break) e finaliza o processo " + i + "<br>";
+        }
+        
+        document.getElementById("break").innerHTML = textbreak;
+        </script>
+
+        <p>Um loop com uma declaração <b>continue</b>.</p>
+
+        <p>Um loop que vai pular o passo onde i = 3.</p>
+
+        <script>
+        let textcontinue = "";
+        for (let i = 0; i < 10; i++) {
+        if (i === 3) { continue; }
+            textcontinue += "1 a 9 e exceto o numero 3: (continue) e segue o processo " + i + "<br>";
+        }
+        document.getElementById("continue").innerHTML = textcontinue;
+        </script>
+</body>
+</html>

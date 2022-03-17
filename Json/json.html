@@ -1,0 +1,25 @@
+<html>
+<body>
+    <h2>Create Object from JSON String</h2>
+
+        <p id="aliados"></p>
+        
+            <script>
+                let textcolaboradores = '{"colaboradores":[' +
+                '{ "PrimeiroNome":"Joe" , "SegundoNome":"Victor" , "Empresa":"#Aliados" },' +
+                '{ "PrimeiroNome":"Wesley" , "SegundoNome":"Lima" , "Empresa":"#Aliados" },' +
+                '{ "PrimeiroNome":"Deivide" , "SegundoNome":"Régis" , "Empresa":"#Aliados" }]}';
+                
+                const obj = JSON.parse(textcolaboradores);
+
+                let textlista = "";
+                    for (let i = 0; i < 3; i++) {
+
+                        textlista += obj.colaboradores[i].PrimeiroNome + " " + obj.colaboradores[i].SegundoNome + " " + obj.colaboradores[i].Empresa + "<br>";
+                    }
+
+                document.getElementById("aliados").innerHTML = textlista;
+
+            </script>
+</body>
+</html>
